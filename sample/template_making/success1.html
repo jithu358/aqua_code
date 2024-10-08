@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white; /* White background for the container */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            padding: 40px;
+            text-align: center;
+            width: 400px;
+            max-width: 90%;
+        }
+        h1 {
+            font-size: 24px; /* Heading size */
+            color: #28a745; /* Green color for success */
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #555; /* Neutral text color */
+        }
+        .amount {
+            font-size: 32px; /* Large font for the amount */
+            color: #333; /* Dark color for amount */
+            font-weight: bold; /* Bold for emphasis */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .button {
+            background: #28a745; /* Solid green background */
+            color: white;
+            border: none;
+            padding: 15px 25px; /* Padding for the button */
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+            display: inline-block;
+        }
+        .button:hover {
+            background: #218838; /* Darker green on hover */
+            transform: translateY(-2px); /* Lift effect on hover */
+        }
+        .info-text {
+            font-size: 14px; /* Smaller font for additional info */
+            color: #888; /* Light gray color for less emphasis */
+            margin-top: 20px; /* Spacing above info text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Successful!</h1>
+        <p>Your payment has been processed successfully.</p>
+        <div class="amount">₹ {{r}}</div> <!-- Displaying the payment amount -->
+        <p>Thank you for your purchase!</p>
+        <a href="/ord" class="button">My Orders</a> <!-- Link back to home or relevant page --><!-- Additional info -->
+    </div>
+</body>
+</html>

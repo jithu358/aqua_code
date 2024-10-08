@@ -1,0 +1,376 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="zxx">-->
+<!--{% load static %}-->
+<!--<head>-->
+<!--    <title>Poly Clinic Medical Category Bootstrap Responsive website Template | Home :: w3layouts</title>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--    <meta charset="utf-8" />-->
+<!--    <meta name="keywords" content="Poly Clinic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,-->
+<!--	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />-->
+<!--    <script>-->
+<!--        addEventListener("load", function () {-->
+<!--            setTimeout(hideURLbar, 0);-->
+<!--        }, false);-->
+
+<!--        function hideURLbar() {-->
+<!--            window.scrollTo(0, 1);-->
+<!--        }-->
+<!--    </script>-->
+<!--    &lt;!&ndash; Custom Theme files &ndash;&gt;-->
+<!--    <link href="{% static 'index/css/bootstrap1.css' %}" type="text/css" rel="stylesheet" media="all">-->
+<!--    <link href="{% static 'index/css/style4.css' %}" type="text/css" rel="stylesheet" media="all">-->
+<!--    &lt;!&ndash; font-awesome icons &ndash;&gt;-->
+<!--    <link href="{% static 'index/css/fontawesome-all.min.css' %}" rel="stylesheet">-->
+<!--    &lt;!&ndash; //Custom Theme files &ndash;&gt;-->
+<!--    &lt;!&ndash; online-fonts &ndash;&gt;-->
+<!--    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--    &lt;!&ndash; banner &ndash;&gt;-->
+<!--    <div class="banner" id="home">-->
+<!--        &lt;!&ndash; header &ndash;&gt;-->
+<!--        <header>-->
+<!--            <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary pt-3">-->
+
+<!--                <h1>-->
+<!--                    <a class="navbar-brand text-white" href="index.html">-->
+<!--                        Admin-->
+<!--                    </a>-->
+<!--                </h1>-->
+<!--                <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
+<!--                    aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                    <span class="navbar-toggler-icon"></span>-->
+<!--                </button>-->
+
+<!--                <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--                    <ul class="navbar-nav ml-lg-auto text-center">-->
+<!--                        <li class="nav-item  mr-3 ">-->
+<!--                            <a class="nav-link text-white " href="profi">Home-->
+<!--                                <span class="sr-only">(current)</span>-->
+<!--                            </a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item  mr-3">-->
+<!--                            <a class="nav-link text-white text-capitalize active" href="ad">Request</a>-->
+<!--                        </li>-->
+
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link  text-white text-capitalize" href="vlab">View Labs</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link  text-white text-capitalize" href="vbook">View Booking</a>-->
+<!--                        </li>-->
+<!--&lt;!&ndash;                        <li class="nav-item  mr-3 ">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <a class="nav-link text-white text-capitalize" href="viewapp">View Appointment</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </li>&ndash;&gt;-->
+<!--                        <li class="nav-item  mr-3 ">-->
+<!--                            <a class="nav-link text-white text-capitalize" href="logout">Logout</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+<!--            </nav>-->
+<!--        </header>-->
+<!--        &lt;!&ndash; //header &ndash;&gt;-->
+<!--        <div class="container">-->
+<!--            &lt;!&ndash; banner-text &ndash;&gt;-->
+<!--            <div class="banner-text">-->
+<!--                <div class="callbacks_container">-->
+<!--                    <div class="container" style="height:auto;width:1300px;background-color:#F0FFFF;opacity:0.8">-->
+<!--                      <br><br>-->
+<!--                    <table class="table table-bordered table-sm">-->
+<!--    <thead>-->
+<!--        <th><b></b>Name</b></th>-->
+<!--        <th><b>Address</b></th>-->
+<!--        <th><b>Location</b></th>-->
+<!--        <th><b>Owner</b></th>-->
+<!--        <th><b>Phone</b></th>-->
+<!--        <th><b>Email</b></th>-->
+<!--        <th><b>Photo</b></th>-->
+<!--        <th><b>Action</b></th>-->
+<!--        <th><b>License</b></th>-->
+<!--        <th><b>Accept</b></th>-->
+<!--         <th><b>Reject</b></th>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--      {% for i in r %}-->
+<!--            <td>{{i.name}}</td>-->
+<!--            <td>{{i.address}}</td>-->
+<!--            <td>{{i.location}}</td>-->
+<!--            <td>{{i.owner}}</td>-->
+<!--            <td>{{i.phno}}</td>-->
+<!--            <td>{{i.email}}</td>-->
+<!--            <td><img src="{{ i.photo.url }} "height=100px width=100px""></td>-->
+<!--            <td>{{i.action}}</td>-->
+<!--            <td><img src="{{ i.license.url }} "height=100px width=100px""></td>-->
+<!--             <td>-->
+<!--         <form method="POST" action="update">-->
+<!--            {% csrf_token %}-->
+<!--             <input type="text" value="{{i.name}}" name="b1" hidden="">-->
+<!--             <input type="submit" value="Accept">-->
+<!--         </form>-->
+<!--         </td>-->
+<!--         <td>-->
+<!--         <form method="POST" action="delete">-->
+<!--            {% csrf_token %}-->
+<!--             <input type="text" value="{{i.name}}" name="b2" hidden="">-->
+<!--             <input type="submit" value="Reject">-->
+<!--         </form>-->
+<!--         </td>-->
+<!--     </tbody>-->
+<!--    {% endfor %}-->
+<!--</table>-->
+<!--                        <br>-->
+<!--                    </div>-->
+
+<!--                            <div class="">-->
+<!--                                <span class="">.</span>-->
+<!--                                <h3>.</h3>-->
+<!--                                <a class="btn btn-primary mt-3" href="services.html" role="button"></a>-->
+<!--                                <br>-->
+<!--							</div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+
+
+<!--    &lt;!&ndash; copyright &ndash;&gt;-->
+<!--    <div class="cpy-right text-center">-->
+<!--&lt;!&ndash;        <p>© 2018 Poly Clinic. All rights reserved | Design by&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="http://w3layouts.com"> W3layouts.</a>&ndash;&gt;-->
+<!--        </p>-->
+<!--    </div>-->
+<!--    &lt;!&ndash; //copyright &ndash;&gt;-->
+<!--    &lt;!&ndash; js &ndash;&gt;-->
+<!--    <script src="{% static 'index/js/jquery-2.2.3.min.js' %}"></script>-->
+<!--    &lt;!&ndash; //js &ndash;&gt;-->
+<!--    &lt;!&ndash; Banner Responsiveslides &ndash;&gt;-->
+<!--    <script src="{% static 'index/js/responsiveslides.min.js' %}"></script>-->
+<!--    <script>-->
+<!--        // You can also use "$(window).load(function() {"-->
+<!--        $(function () {-->
+<!--            // Slideshow 4-->
+<!--            $("#slider3").responsiveSlides({-->
+<!--                auto: false,-->
+<!--                pager: true,-->
+<!--                nav: false,-->
+<!--                speed: 500,-->
+<!--                namespace: "callbacks",-->
+<!--                before: function () {-->
+<!--                    $('.events').append("<li>before event fired.</li>");-->
+<!--                },-->
+<!--                after: function () {-->
+<!--                    $('.events').append("<li>after event fired.</li>");-->
+<!--                }-->
+<!--            });-->
+
+<!--        });-->
+<!--    </script>-->
+<!--    &lt;!&ndash; //banner responsive slides &ndash;&gt;-->
+<!--    &lt;!&ndash; Flexslider-js for-testimonials &ndash;&gt;-->
+<!--    <script src="{% static 'index/js/jquery.flexisel.js' %}"></script>-->
+<!--    <script>-->
+<!--        $(window).load(function () {-->
+<!--            $("#flexiselDemo1").flexisel({-->
+<!--                visibleItems: 1,-->
+<!--                animationSpeed: 1000,-->
+<!--                autoPlay: false,-->
+<!--                autoPlaySpeed: 3000,-->
+<!--                pauseOnHover: true,-->
+<!--                enableResponsiveBreakpoints: true,-->
+<!--                responsiveBreakpoints: {-->
+<!--                    portrait: {-->
+<!--                        changePoint: 480,-->
+<!--                        visibleItems: 1-->
+<!--                    },-->
+<!--                    landscape: {-->
+<!--                        changePoint: 640,-->
+<!--                        visibleItems: 1-->
+<!--                    },-->
+<!--                    tablet: {-->
+<!--                        changePoint: 768,-->
+<!--                        visibleItems: 1-->
+<!--                    }-->
+<!--                }-->
+<!--            });-->
+
+<!--        });-->
+<!--    </script>-->
+<!--    &lt;!&ndash; //Flexslider-js for-testimonials &ndash;&gt;-->
+<!--    &lt;!&ndash; //fixed quick contact &ndash;&gt;-->
+<!--    <script>-->
+<!--        $(function () {-->
+<!--            var hidden = true;-->
+<!--            $(".heading").click(function () {-->
+<!--                if (hidden) {-->
+<!--                    $(this).parent('.outer-col').animate({-->
+<!--                        bottom: "0"-->
+<!--                    }, 1200);-->
+<!--                } else {-->
+<!--                    $(this).parent('.outer-col').animate({-->
+<!--                        bottom: "-305px"-->
+<!--                    }, 1200);-->
+<!--                }-->
+<!--                hidden = !hidden;-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+<!--    &lt;!&ndash; //fixed quick contact &ndash;&gt;-->
+<!--    &lt;!&ndash; start-smooth-scrolling &ndash;&gt;-->
+<!--    <script src="{% static 'index/js/easing.js' %}"></script>-->
+<!--    <script>-->
+<!--        jQuery(document).ready(function ($) {-->
+<!--            $(".scroll").click(function (event) {-->
+<!--                event.preventDefault();-->
+
+<!--                $('html,body').animate({-->
+<!--                    scrollTop: $(this.hash).offset().top-->
+<!--                }, 1000);-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+<!--    <script src="{% static 'index/js/SmoothScroll.min.js' %}"></script>-->
+<!--    &lt;!&ndash; //end-smooth-scrolling &ndash;&gt;-->
+<!--    &lt;!&ndash; Bootstrap core JavaScript-->
+<!--================================================== &ndash;&gt;-->
+<!--    &lt;!&ndash; Placed at the end of the document so the pages load faster &ndash;&gt;-->
+<!--    <script src="{% static 'index/js/bootstrap1.js' %}"></script>-->
+<!--</body>-->
+
+<!--</html>-->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+<head>
+    <title>Poly Clinic Medical Category Bootstrap Responsive website Template | Contact :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Poly Clinic Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- Custom Theme files -->
+    <link href="{% static 'index/css/bootstrap.css' %}" type="text/css" rel="stylesheet" media="all">
+    <link href="{% static 'index/css/style4admin.css' %}" type="text/css" rel="stylesheet" media="all">
+    <!-- font-awesome icons -->
+    <link href="css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="inner-banner" id="home">
+        <!-- header -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-gradient-secondary pt-3">
+
+                <h1>
+                    <a class="navbar-brand text-white" href="index.html">
+                        Admin
+                        <span></span>
+                    </a>
+                </h1>
+                <button class="navbar-toggler ml-md-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-lg-auto text-center">
+                                               <li class="nav-item  mr-3 ">
+
+                        </li>
+                        <li class="nav-item  mr-3">
+                            <a class="nav-link text-white text-capitalize active" href="pro11">Back</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <!-- //header -->
+        <!-- //container -->
+    </div>
+    <!-- breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Admin</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Request</li>
+        </ol>
+    </nav>
+
+                    <div class="container" style="height:auto;width:1300px;background-color:#F0FFFF;opacity:0.8">
+                      <br><br>
+                    <table class="table table-bordered table-sm">
+    <thead>
+        <th><b>Name</b></th>
+        <th><b>Email</b></th>
+        <th><b>Phone</b></th>
+        <th><b>Action</b></th>
+        <th><b>License</b></th>
+        <th><b>Accept</b></th>
+         <th><b>Reject</b></th>
+    </thead>
+    <tbody>
+      {% for i in r %}
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.action}}</td>
+            <td><img src="{{ i.images.url }}" height=100px width=100px""></td>
+            <td>
+        <form method="POST" action="update">
+            {% csrf_token %}
+             <input type="text" value="{{i.name}}" name="b1" hidden="">
+             <input type="submit" value="Accept">
+         </form>
+         </td>
+         <td>
+         <form method="POST" action="delete">
+            {% csrf_token %}
+             <input type="text" value="{{i.name}}" name="b2" hidden="">
+             <input type="submit" value="Reject">
+         </form>
+         </td>
+     </tbody>
+    {% endfor %}
+</table>
+                        <br>
+                    </div>
+                      <script>
+
+    const imageElements = document.querySelectorAll('.view-image');
+
+
+    imageElements.forEach(image => {
+        image.addEventListener('click', function() {
+            // Open a new tab/window with the image
+            window.open(this.src, '_blank');
+        });
+    });
+</script>
+</body>
+</html>
